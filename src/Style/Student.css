@@ -92,3 +92,65 @@
     margin-right: 8px;
   }
 }
+/* Responsive styles for screens up to 768px width (mobile) */
+@media (max-width: 768px) {
+  #stud-collection {
+    gap: 10px; /* Reduce the gap between student cards for a compact layout */
+  }
+
+  .stud-card {
+    max-width: 100%; /* Make student cards occupy the full width */
+    padding: 10px; /* Reduce padding for a more compact design */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Reduce box-shadow for a subtle effect */
+  }
+
+  .stud-card h4 {
+    font-size: 1.2rem; /* Slightly smaller font size for headings */
+    margin-bottom: 0.5rem; /* Adjust margin as needed */
+  }
+
+  .stud-card p {
+    font-size: 1rem; /* Adjust font size */
+    margin: 0.25rem 0; /* Adjust margin */
+    color: red; /* Change text color */
+  }
+
+  .card-btn-group {
+    margin-top: 15px;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px 12px; /* Adjust button padding */
+    margin-right: 8px;
+    background-color: rgb(17, 0, 255); /* Maintain button color for visibility */
+  }
+
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #ff008c; /* Hover color remains consistent */
+  }
+}
+
+/* Further adjustments for screens smaller than 480px (extra small screens) */
+@media (max-width: 480px) {
+  .stud-card {
+    padding: 8px; /* Reduce padding even further for extra small screens */
+  }
+
+  .stud-card h4 {
+    font-size: 1.1rem; /* Smaller font size for headings on extra small screens */
+  }
+
+  .card-btn-group {
+    margin-top: 10px; /* Reduce margin-top for button group */
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 12px; /* Further reduce button font size */
+    padding: 6px 10px; /* Reduce button padding */
+    margin-right: 6px; /* Further reduce button margin */
+  }
+}

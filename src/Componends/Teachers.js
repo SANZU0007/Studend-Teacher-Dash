@@ -63,9 +63,9 @@ function Teachers() {
   };
 
   return (
-    <div className="teachers">
-      <h2>Teacher List</h2>
-      <button onClick={handleAddTeacherClick}>Add Teacher</button>
+    <div className="teachersstudemt">
+      <h2 className="teacherlisr">Teacher List</h2>
+      <button  className="btn3" onClick={handleAddTeacherClick}>Add Teacher</button>
       {isAddTeacherOpen && <AddTeacher onAddTeacher={handleAddTeacher} />}
       <table>
         <thead>
@@ -91,7 +91,7 @@ function Teachers() {
                   <td>{teacher.contact}</td>
                   <td>{teacher.subject}</td>
                   <td>
-                    <button onClick={() => handleEditTeacher(teacher)}>
+                    <button  className="btm2" onClick={() => handleEditTeacher(teacher)}>
                       Edit
                     </button>
                     <DeleteTeacher
