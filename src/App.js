@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Addstudent from "./Componends/Addstudent";
 import Editstudents from "./Componends/Editstudents";
 import Nopage from "./Componends/Nopage";
+import Teachers from "./Componends/Teachers";
 
 function App() {
   const [students, setStudents] = useState(data);
@@ -22,22 +23,20 @@ function App() {
           element={<Studends students={students} setStudents={setStudents} />}
         />
         <Route
-          path="add-student"
+          path="/add-student"  // Corrected path with leading slash
           element={<Addstudent students={students} setStudents={setStudents} />}
         />
         <Route
           path="/edit/:id"
-          element={
-            <Editstudents students={students} setStudents={setStudents} />
-          }
+          element={<Editstudents students={students} setStudents={setStudents} />}
         />
-        <Route
-        path="*"
-        element={<Nopage/>}/>
-
-
+        <Route path="/teachers" element={<Teachers />} />
+        
+        {/* Catch-all route for unmatched paths */}
+        <Route path="*" element={<Nopage />} />
       </Routes>
     </div>
   );
 }
+
 export default App;

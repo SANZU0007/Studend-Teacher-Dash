@@ -1,0 +1,64 @@
+/* Base.css */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header {
+    width: 100%;
+    background-color: #007bff; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin: 0 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffcc00; /* Change to your desired hover color */
+  }
+  
+  main {
+    flex-grow: 1;
+    text-align: left;
+    width: 100%;
+    max-width: 800px; /* Adjust to your preferred maximum width */
+    padding: 20px;
+  }
+  
+  /* Add media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  }
+  

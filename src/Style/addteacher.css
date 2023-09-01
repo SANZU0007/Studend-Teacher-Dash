@@ -1,0 +1,30 @@
+/* AddTeacher.css */
+.add-teacher {
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply a transition effect to the button on hover */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition effect on background-color */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* New background color on hover */
+  }
+  

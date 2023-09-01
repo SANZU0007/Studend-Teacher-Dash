@@ -1,0 +1,23 @@
+/* DeleteTeacher.css */
+
+/* Style for the Delete button */
+tr {
+    background-color: #ffffff; /* Red background color */
+  }
+  
+  td {
+    padding: 8px;
+  }
+  
+  button {
+    background-color: #0206fc; /* Red button background color */
+    color: white; /* Text color */
+    border: none; /* Remove button border */
+  /* Add some padding for better appearance */
+    cursor: pointer; /* Show a pointer cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
