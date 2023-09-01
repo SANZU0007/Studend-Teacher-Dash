@@ -1,0 +1,54 @@
+/* edit.css */
+.edit-teacher {
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .edit-buttons {
+    text-align: center;
+  }
+  
+  .edit-button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .save-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .edit-input {
+      font-size: 14px;
+    }
+  
+    .edit-button {
+      font-size: 14px;
+    }
+  }
+  

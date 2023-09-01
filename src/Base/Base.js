@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../Glopal.css"
+
 import "../Style/Base.css"
 
 function Base({ title, description, children }) {

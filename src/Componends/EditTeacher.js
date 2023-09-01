@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Style/edit.css";
 
 function EditTeacher({ teacher, onUpdateTeacher, onCancelEdit }) {
   const [editedTeacher, setEditedTeacher] = useState({ ...teacher });
@@ -15,18 +16,19 @@ function EditTeacher({ teacher, onUpdateTeacher, onCancelEdit }) {
     const { name, value } = event.target;
     setEditedTeacher({
       ...editedTeacher,
-      [name]: value
+      [name]: value,
     });
   };
 
   return (
-    <tr>
+    <tr className="edit-teacher">
       <td>
         <input
           type="text"
           name="name"
           value={editedTeacher.name}
           onChange={handleInputChange}
+          className="edit-input"
         />
       </td>
       <td>
@@ -35,6 +37,7 @@ function EditTeacher({ teacher, onUpdateTeacher, onCancelEdit }) {
           name="contact"
           value={editedTeacher.contact}
           onChange={handleInputChange}
+          className="edit-input"
         />
       </td>
       <td>
@@ -43,11 +46,22 @@ function EditTeacher({ teacher, onUpdateTeacher, onCancelEdit }) {
           name="subject"
           value={editedTeacher.subject}
           onChange={handleInputChange}
+          className="edit-input"
         />
       </td>
-      <td>
-        <button onClick={handleSaveClick}>Save</button>
-        <button onClick={handleCancelClick}>Cancel</button>
+      <td className="edit-buttons">
+        <button
+          onClick={handleSaveClick}
+          className="edit-button save-button"
+        >
+          Save
+        </button>
+        <button
+          onClick={handleCancelClick}
+          className="edit-button cancel-button"
+        >
+          Cancel
+        </button>
       </td>
     </tr>
   );

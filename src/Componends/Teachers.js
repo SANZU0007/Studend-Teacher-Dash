@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import EditTeacher from "./EditTeacher";
 import DeleteTeacher from "./DeleteTeacher";
 import AddTeacher from "./AddTeacher";
-import "../Style/Teacher.css"
+import "../Style/Teacher.css";
 
 export const teachersData = [
-  { id: 1, name: "Mr. Johnson", contact: "teacher@example.com", subject: "Math" },
-  { id: 2, name: "Ms. Anderson", contact: "teacher2@example.com", subject: "Science" },
+  {
+    id: 1,
+    name: "Mr. Johnson",
+    contact: "teacher@example.com",
+    subject: "Math",
+  },
+  {
+    id: 2,
+    name: "Ms. Anderson",
+    contact: "teacher2@example.com",
+    subject: "Science",
+  },
   // Add more teacher data here
 ];
 
@@ -32,7 +42,9 @@ function Teachers() {
   };
 
   const handleDeleteTeacher = (teacherId) => {
-    const updatedTeachers = teachers.filter((teacher) => teacher.id !== teacherId);
+    const updatedTeachers = teachers.filter(
+      (teacher) => teacher.id !== teacherId
+    );
     setTeachers(updatedTeachers);
     setEditingTeacher(null);
   };
@@ -79,8 +91,13 @@ function Teachers() {
                   <td>{teacher.contact}</td>
                   <td>{teacher.subject}</td>
                   <td>
-                    <button onClick={() => handleEditTeacher(teacher)}>Edit</button>
-                    <DeleteTeacher onDeleteTeacher={handleDeleteTeacher} teacherId={teacher.id} />
+                    <button onClick={() => handleEditTeacher(teacher)}>
+                      Edit
+                    </button>
+                    <DeleteTeacher
+                      onDeleteTeacher={handleDeleteTeacher}
+                      teacherId={teacher.id}
+                    />
                   </td>
                 </tr>
               )}

@@ -1,0 +1,94 @@
+/* Students.css */
+#stud-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#style{
+  color: rgb(39, 1, 88);
+}
+
+.stud-card {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #0026ff;
+  color: #0026ff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.stud-card h4 {
+  font-size: 1.5rem; /* Responsive font size */
+  margin-bottom: 1rem; /* Responsive margin */
+}
+
+.stud-card p {
+  font-size: 1rem; /* Responsive font size */
+  margin: 0.5rem 0; /* Responsive margin */
+}
+
+.card-btn-group {
+  margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 10px 20px;
+  background-color: rgb(17, 0, 255);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #ff008c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .stud-card {
+    max-width: 100%;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stud-card {
+    padding: 10px;
+  }
+
+  .stud-card h4 {
+    font-size: 1.2rem; /* Adjust as needed */
+    margin-bottom: 0.5rem; /* Adjust as needed */
+  }
+
+  .stud-card p {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    color: red;
+   
+  }
+
+  .card-btn-group {
+    margin-top: 15px;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-right: 8px;
+  }
+}

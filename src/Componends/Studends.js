@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Base from "../Base/Base";
-
 import { useNavigate } from "react-router-dom";
-import { Button, Paper } from "@mui/material";
+import "../Style/Student.css"
 
 const Students = ({ students, setStudents }) => {
   const navigate = useNavigate();
@@ -14,26 +13,32 @@ const Students = ({ students, setStudents }) => {
     setStudents(removeStudent);
   };
 
-  // function naviGatetoEditpage(studentID) {
-  //   navigate(`/edit/${studentID}`);
-  // }
-
   return (
-    <Base title={"student info"} description={"all student info"}>
-      <Paper className="stud-collection">
+    <Base title={"Student Info"} description={"All Student Info"}>
+      <div id="stud-collection">
         {students.map((stud, idx) => (
-          <Paper elevation={10} className="stud-card" key={idx}>
-            <h4>{stud.name}</h4>
-            <p>batch: {stud.batch}</p>
-            <p>gender: {stud.gender}</p>
-            <p>education: {stud.education}</p>
+          <div className="stud-card" key={idx}>
+            <h4 id="style">{stud.name}</h4>
+            <p>Batch: {stud.batch}</p>
+            <p>Gender: {stud.gender}</p>
+            <p>Education: {stud.education}</p>
             <div className="card-btn-group">
-              <Button color="success" onClick={() => navigate(`/edit/${stud.id}`)}>edit</Button>
-              <Button color="error" onClick={() => deleteStudent(stud.id)}>delete</Button>
+              <button
+                className="edit-button"
+                onClick={() => navigate(`/edit/${stud.id}`)}
+              >
+                Edit
+              </button>
+              <button
+                className="delete-button"
+                onClick={() => deleteStudent(stud.id)}
+              >
+                Delete
+              </button>
             </div>
-          </Paper>
+          </div>
         ))}
-      </Paper>
+      </div>
     </Base>
   );
 };
