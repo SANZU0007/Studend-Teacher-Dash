@@ -24,9 +24,9 @@ function Base({ title, description, children }) {
           </ul>
         </nav>
       </header>
-      <main>
-        <h1>{title}</h1>
-        <h4>{description}</h4>
+      <main >
+      <div className="students-head"> <h1>{title}</h1>
+        <h4>{description}</h4></div>
         <div className="container">{children}</div>
       </main>
     </div>

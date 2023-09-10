@@ -1,0 +1,80 @@
+/* Default styles */
+.teachers-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #1a16fd;
+    background-color: #1b86f8;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .add-button {
+    background-color: #08011a; /* Change to your desired blue color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  
+  .teacher-list-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .edit-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive styles for screens smaller than 600px */
+  @media (max-width: 600px) {
+    .teachers-container {
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    .teacher-list-title {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+  
+    .add-button {
+      padding: 8px 16px;
+    }
+  
+    .edit-button {
+      padding: 4px 8px;
+    }
+  }
+  .tablebody{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  #table-body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
