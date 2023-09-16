@@ -6,7 +6,7 @@ const Dashboard = () => {
     <div className="dashboard-background">
     <Base
     title = {"welcome to the student application"}
-    description = {"this is the student data application"}>
+    description = {"this is the student data application click to nav view Details"}>
     </Base>
     </div>
   )

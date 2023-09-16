@@ -1,30 +1,83 @@
-/* AddTeacher.css */
+/* addteacher.css */
+
+/* Container styles */
 .add-teacher {
-    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+  background-color: #ffffff;
+  border: 1px solid #0e0d0d;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgb(43, 0, 99);
+}
+
+/* Title styles */
+.add-teacher h2 {
+  padding-top: 5%;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000; /* Adjust text color as needed */
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #110b0b; /* Adjust label text color as needed */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #131111;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #050463dc;
+  color: #ffffff;
+  transform: scale(1.05); /* Add a simple hover animation */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .add-teacher h2 {
+    font-size: 22px;
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+@media (max-width: 768px) {
+  .add-teacher h2 {
+    font-size: 20px;
   }
-  
-  /* Apply a transition effect to the button on hover */
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transition effect on background-color */
+
+  .form-group input {
+    font-size: 14px;
   }
-  
-  button:hover {
-    background-color: #0056b3; /* New background color on hover */
+}
+
+@media (max-width: 480px) {
+  .add-teacher h2 {
+    font-size: 18px;
   }
-  
+
+  .form-group input {
+    font-size: 12px;
+  }
+}

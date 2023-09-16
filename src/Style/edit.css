@@ -1,92 +1,51 @@
-/* Common styles for all screen sizes */
+/* edit.css */
+
+/* Container styles */
 .edit-teacher {
-    transition: background-color 0.3s ease;
-  }
-  
+  background-color: #ffffff;
+  border: 1px solid #0e0d0d;
+  border-radius: 5px;
+  padding: 10px; /* Adjust padding for small screens */
+  box-shadow: 0 2px 4px rgb(43, 0, 99);
+}
+
+/* Input styles */
+.edit-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #131111;
+  border-radius: 5px;
+  font-size: 14px; /* Adjust font size for small screens */
+  margin-bottom: 6px; /* Add margin between inputs */
+}
+
+/* Edit button styles */
+.edit-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.cancel-button {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 325px) {
   .edit-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .edit-buttons {
-    text-align: center;
-  }
-  
-  .edit-button {
-    padding: 8px 16px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .save-button {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .cancel-button {
-    background-color: #ff0000;
-    color: #fff;
-  }
-  
-  .edit-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-  
-  /* Responsive styles for screens up to 768px width (mobile) */
-  @media (max-width: 768px) {
-    .edit-input {
-      font-size: 14px;
-      padding: 6px 10px; /* Adjust padding for smaller screens */
-    }
-  
-    .edit-button {
-      font-size: 14px;
-      padding: 6px 10px;
-      margin: 3px;
-    }
-  
-    /* Center-align buttons on smaller screens */
-    .edit-buttons {
-      text-align: center;
-    }
-  }
-  
-  /* Responsive styles for screens between 768px and 1024px width (tablets) */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .edit-input {
-      font-size: 16px; /* Adjust font size for tablets */
-      padding: 8px 12px; /* Adjust padding for tablets */
-    }
-  
-    .edit-button {
-      font-size: 16px;
-      padding: 8px 12px;
-      margin: 4px; /* Adjust margin for tablets */
-    }
-  }
-  
-  /* Responsive styles for screens larger than 1024px (desktop) */
-  @media (min-width: 1025px) {
-      /* Your styles for desktop screens go here */
-  .edit-input {
-    font-size: 18px; /* Example: Adjust font size for larger screens */
-    padding: 10px 16px; /* Example: Adjust padding for larger screens */
+    font-size: 12px; /* Further reduce font size for very small screens */
   }
 
   .edit-button {
-    font-size: 18px;
-    padding: 10px 16px;
-    margin: 5px; /* Example: Adjust margin for larger screens */
+    padding: 4px 8px;
+    font-size: 12px;
   }
-    /* You can add specific styles for larger screens here */
-  }
-  
+}

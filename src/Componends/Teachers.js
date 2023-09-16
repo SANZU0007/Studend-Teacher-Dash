@@ -2,27 +2,7 @@ import React, { useState } from "react";
 import EditTeacher from "./EditTeacher";
 import DeleteTeacher from "./DeleteTeacher";
 import AddTeacher from "./AddTeacher";
-import { Typography } from "@mui/material";
 import "../Style/teacherss.css"; // Import your CSS stylesheet
-import {
-  Button,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-} from "@mui/material";
-import { Edit, Delete } from "@mui/icons-material";
-
-// Define CSS classes for your component
-const classNames = {
-  container: "teachers-container",
-  title: "teacher-list-title",
-  addButton: "add-button",
-  editButton: "edit-button",
-};
 
 export const teachersData = [
   {
@@ -83,62 +63,58 @@ function Teachers() {
   };
 
   return (
-    <div className={classNames.container}>
-      <Typography variant="h4" className={classNames.title}>
-        Teacher List
-      </Typography>
+    <div id="teachers-container">
+      <h4 id="teacher-list-title">Teacher List</h4>
       <button
-  className={classNames.addButton}
-  style={{ backgroundColor: '#007bff', color: '#fff' }}
-  onClick={handleAddTeacherClick}
->
-  Add Teacher
-</button>
+        id="add-button"
+        style={{ backgroundColor: "#007bff", color: "#fff" }}
+        onClick={handleAddTeacherClick}
+      >
+        Add Teacher
+      </button>
 
       {isAddTeacherOpen && <AddTeacher onAddTeacher={handleAddTeacher} />}
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Contact Information</TableCell>
-              <TableCell>Subject Taught</TableCell>
-              <TableCell>Actions</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody id="tablebody">
-            {teachers.map((teacher) => (
-              <React.Fragment key={teacher.id}>
-                {editingTeacher === teacher ? (
-                  <EditTeacher
-                    teacher={teacher}
-                    onUpdateTeacher={handleUpdateTeacher}
-                    onCancelEdit={handleCancelEdit}
-                  />
-                ) : (
-                  <TableRow id="table-body">
-                    <TableCell>{teacher.name}</TableCell>
-                    <TableCell>{teacher.contact}</TableCell>
-                    <TableCell>{teacher.subject}</TableCell>
-                    <TableCell>
-                      <Button
-                        className={classNames.editButton}
-                        onClick={() => handleEditTeacher(teacher)}
-                      >
-                        <Edit /> Edit
-                      </Button>
-                      <DeleteTeacher
-                        onDeleteTeacher={handleDeleteTeacher}
-                        teacherId={teacher.id}
-                      />
-                    </TableCell>
-                  </TableRow>
-                )}
-              </React.Fragment>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Contact Information</th>
+            <th>Subject Taught</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody">
+          {teachers.map((teacher) => (
+            <React.Fragment key={teacher.id}>
+              {editingTeacher === teacher ? (
+                <EditTeacher
+                  teacher={teacher}
+                  onUpdateTeacher={handleUpdateTeacher}
+                  onCancelEdit={handleCancelEdit}
+                />
+              ) : (
+                <tr id="table-body">
+                  <td>{teacher.name}</td>
+                  <td>{teacher.contact}</td>
+                  <td>{teacher.subject}</td>
+                  <td>
+                    <button
+                      id="edit-button"
+                      onClick={() => handleEditTeacher(teacher)}
+                    >
+                      Edit
+                    </button>
+                    <DeleteTeacher
+                      onDeleteTeacher={handleDeleteTeacher}
+                      teacherId={teacher.id}
+                    />
+                  </td>
+                </tr>
+              )}
+            </React.Fragment>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

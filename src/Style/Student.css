@@ -1,18 +1,24 @@
 /* Students.css */
+
+/* Container for student cards */
 #stud-collection {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-#style{
+
+/* Header styles */
+#style {
   color: rgb(39, 1, 88);
 }
 
+/* Student card styles */
 .stud-card {
   max-width: 300px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #ff7474;
   border: 1px solid #0026ff;
   color: #0026ff;
   border-radius: 5px;
@@ -20,20 +26,28 @@
   text-align: center;
 }
 
+/* Heading styles */
 .stud-card h4 {
   font-size: 1.5rem; /* Responsive font size */
   margin-bottom: 1rem; /* Responsive margin */
 }
 
+/* Paragraph styles */
 .stud-card p {
   font-size: 1rem; /* Responsive font size */
   margin: 0.5rem 0; /* Responsive margin */
+  color: rgb(0, 8, 56); 
+  background-color: #e99c9c;
+  font-weight: 900;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Button group styles */
 .card-btn-group {
   margin-top: 20px;
 }
 
+/* Edit and Delete button styles */
 .edit-button,
 .delete-button {
   padding: 10px 20px;
@@ -46,39 +60,33 @@
   margin-right: 10px;
 }
 
+/* Hover effect for buttons */
 .edit-button:hover,
 .delete-button:hover {
   background-color: #ff008c;
 }
 
-/* Responsive styles */
+/* Responsive design for screens up to 768px width (mobile) */
 @media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  #stud-collection {
+    gap: 10px;
+  }
+
   .stud-card {
     max-width: 100%;
-  }
-
-  .edit-button,
-  .delete-button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .stud-card {
     padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   }
 
   .stud-card h4 {
-    font-size: 1.2rem; /* Adjust as needed */
-    margin-bottom: 0.5rem; /* Adjust as needed */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
 
   .stud-card p {
     font-size: 1rem;
     margin: 0.25rem 0;
-    color: red;
-   
   }
 
   .card-btn-group {
@@ -87,70 +95,36 @@
 
   .edit-button,
   .delete-button {
-    font-size: 12px;
-    padding: 6px 12px;
+    font-size: 14px;
+    padding: 8px 12px;
     margin-right: 8px;
-  }
-}
-/* Responsive styles for screens up to 768px width (mobile) */
-@media (max-width: 768px) {
-  #stud-collection {
-    gap: 10px; /* Reduce the gap between student cards for a compact layout */
-  }
-
-  .stud-card {
-    max-width: 100%; /* Make student cards occupy the full width */
-    padding: 10px; /* Reduce padding for a more compact design */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Reduce box-shadow for a subtle effect */
-  }
-
-  .stud-card h4 {
-    font-size: 1.2rem; /* Slightly smaller font size for headings */
-    margin-bottom: 0.5rem; /* Adjust margin as needed */
-  }
-
-  .stud-card p {
-    font-size: 1rem; /* Adjust font size */
-    margin: 0.25rem 0; /* Adjust margin */
-    color: red; /* Change text color */
-  }
-
-  .card-btn-group {
-    margin-top: 15px;
-  }
-
-  .edit-button,
-  .delete-button {
-    font-size: 14px; /* Adjust button font size */
-    padding: 8px 12px; /* Adjust button padding */
-    margin-right: 8px;
-    background-color: rgb(17, 0, 255); /* Maintain button color for visibility */
+    background-color: rgb(0, 0, 3);
   }
 
   .edit-button:hover,
   .delete-button:hover {
-    background-color: #ff008c; /* Hover color remains consistent */
+    background-color: #ff008c;
   }
 }
 
 /* Further adjustments for screens smaller than 480px (extra small screens) */
 @media (max-width: 480px) {
   .stud-card {
-    padding: 8px; /* Reduce padding even further for extra small screens */
+    padding: 8px;
   }
 
   .stud-card h4 {
-    font-size: 1.1rem; /* Smaller font size for headings on extra small screens */
+    font-size: 1.1rem;
   }
 
   .card-btn-group {
-    margin-top: 10px; /* Reduce margin-top for button group */
+    margin-top: 10px;
   }
 
   .edit-button,
   .delete-button {
-    font-size: 12px; /* Further reduce button font size */
-    padding: 6px 10px; /* Reduce button padding */
-    margin-right: 6px; /* Further reduce button margin */
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-right: 6px;
   }
 }
